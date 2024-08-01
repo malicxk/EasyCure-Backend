@@ -267,7 +267,7 @@ export class UserController {
     };
 
     async uploadProfileImage(req: Request, res: Response): Promise<void> {
-        console.log("Entered into the profile photo uploading controller.........");
+        console.log("Entered into the profile photo uploading controller......");
         try {
             const { userId } = req.body
             console.log("The user id is", userId);
