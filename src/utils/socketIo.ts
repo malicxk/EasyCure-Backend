@@ -7,7 +7,7 @@ import ChatMessage from '../model/chatMessageModel'; // Ensure your model path i
 const initializeSocket = (httpServer: HttpServer): SocketIOServer => {
   const io = new SocketIOServer(httpServer, {
     cors: {
-      origin: 'http://localhost:4200', // Replace with your client's URL
+      origin: 'http://localhost:4200',
       methods: ['GET', 'POST']
     }
   });
