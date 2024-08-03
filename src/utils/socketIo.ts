@@ -7,7 +7,7 @@ import ChatMessage from '../model/chatMessageModel'; // Ensure your model path i
 const initializeSocket = (httpServer: HttpServer): SocketIOServer => {
   const io = new SocketIOServer(httpServer, {
     cors: {
-      origin: 'http://localhost:4200',
+      origin: 'easy-cure-front-end.vercel.app',
       methods: ['GET', 'POST']
     }
   });
