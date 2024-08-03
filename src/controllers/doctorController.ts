@@ -342,9 +342,9 @@ export class DoctorController {
     };
 
     async getDoctorDetailsById(req: Request, res: Response) {
-        const { doctorId } = req.params;
+        const  doctorId  = req.doctor_id;
         try {
-            const doctor = await this._interactor.fetchDoctorDetails(doctorId);
+            const doctor = await this._interactor.fetchDoctorDetails(doctorId as string);
             res.status(StatusCodes.OK).json(doctor);
         } catch (error) {
             console.error('Error fetching doctor details:', error);

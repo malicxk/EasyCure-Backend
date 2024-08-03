@@ -252,7 +252,7 @@ export class UserController {
     };
 
     async getUserProfile(req: Request, res: Response): Promise<void> {
-        const  userId  = req.user_id
+        const userId = req.user_id
         try {
             const user = await this._interactor.getUserById(userId as string);
             if (!user) {
