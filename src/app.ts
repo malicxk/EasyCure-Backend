@@ -6,14 +6,16 @@ import Session from 'express-session';
 // import './Auth'
 // import passport from 'passport'
 
-const app=express();
-app.use(cors());
+const app = express();
+app.use(cors({
+    origin: "https://easy-cure-front-end.vercel.app"
+}));
 app.use(bodyparser.json());
 
 app.use(Session({
-    resave:false,
-    saveUninitialized:true,
-    secret:'secret'
+    resave: false,
+    saveUninitialized: true,
+    secret: 'secret'
 }))
 
 // app.use(passport.initializer());
