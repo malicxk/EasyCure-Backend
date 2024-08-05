@@ -33,7 +33,7 @@ router.put('/changeSlotStatus/:slotId', authMiddleWare, controller.updateConsult
 router.get('/VirtualBookings', authMiddleWare, controller.getBookingsVirtual.bind(controller));
 router.get('/fetchUserIdbooking/:bookingId', authMiddleWare, controller.getUserDetailsByBookingId.bind(controller));
 router.get('/chatMessages/:senderId/:receiverId', authMiddleWare, controller.getMessages.bind(controller));
-router.get("/docDetails/:doctorId", authMiddleWare, controller.getDoctorDetailsById.bind(controller));
+router.get("/docDetails/:doctorId",controller.getDoctorDetailsById.bind(controller));
 router.post('/uploadPrescription', authMiddleWare, controller.uploadEPrescription.bind(controller));
 
 

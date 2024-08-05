@@ -342,7 +342,7 @@ export class DoctorController {
     };
 
     async getDoctorDetailsById(req: Request, res: Response) {
-        const  doctorId  = req.doctor_id;
+        const { doctorId } = req.params
         try {
             const doctor = await this._interactor.fetchDoctorDetails(doctorId as string);
             res.status(StatusCodes.OK).json(doctor);
