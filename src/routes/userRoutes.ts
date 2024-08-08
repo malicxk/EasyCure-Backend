@@ -28,7 +28,7 @@ router.post('/refresh-token',controller.refreshToken.bind(controller));
 //slots functionalities.......
 router.get('/getSlotsByDoc/:doctorId', controller.getSlotsByDoctorId.bind(controller));
 router.post('/bookSlot', controller.payBookSlot.bind(controller));
-router.get('/userProfile/:userId', authenticateUserToken, controller.getUserProfile.bind(controller));
+router.get('/userProfile/:userId', controller.getUserProfile.bind(controller));
 router.post('/uploadProfileImage', singleImageUpload.single('UprofileImage'), controller.uploadProfileImage.bind(controller));
 router.post('/uploadMedCertificate', singleImageUpload.single('medicalCertificate'), controller.uploadMedCertificate.bind(controller));
 router.put('/editProfile/:userId', controller.updateUser.bind(controller))
