@@ -8,8 +8,8 @@ import Session from 'express-session';
 
 const app = express();
 app.use(cors({
-    // origin: "https://easy-cure-front-end.vercel.app"
-    origin: 'http://localhost:4200'
+    origin: "https://easy-cure-front-end.vercel.app"
+    // origin: 'http://localhost:4200'
 }));
 app.use(bodyparser.json());
 
