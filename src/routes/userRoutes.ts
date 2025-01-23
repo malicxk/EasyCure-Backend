@@ -24,7 +24,7 @@ router.post("/resendOtp", controller.ResendOTP.bind(controller));
 router.post("/forgotPassword", controller.forgotPassword.bind(controller));
 router.post("/forgPassOTPverfiy", controller.forgPassVerifyOTP.bind(controller));
 router.post("/resetPassWord", controller.resetPassWord.bind(controller));
-router.post('/refresh-token',controller.refreshToken.bind(controller));
+router.post('/refresh-token', controller.refreshToken.bind(controller));
 //slots functionalities.......
 router.get('/getSlotsByDoc/:doctorId', controller.getSlotsByDoctorId.bind(controller));
 router.post('/bookSlot', controller.payBookSlot.bind(controller));
