@@ -7,10 +7,12 @@ import Session from 'express-session';
 // import passport from 'passport'
 
 const app = express();
+
 app.use(cors({
     origin: "https://easy-cure-front-end.vercel.app"
     // origin: 'http://localhost:4200'
 }));
+
 app.use(bodyparser.json());
 
 app.use(Session({
